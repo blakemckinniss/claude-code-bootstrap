@@ -16,6 +16,36 @@ echo "📁 Project root: $PROJECT_ROOT"
 echo "📁 Script location: $SCRIPT_DIR"
 echo ""
 
+# Check if this is a cloned template repo that needs git reinitialization
+if [ -d "$PROJECT_ROOT/.git" ]; then
+    REMOTE_URL=$(git -C "$PROJECT_ROOT" remote get-url origin 2>/dev/null || echo "")
+    if [[ "$REMOTE_URL" == *"claude-code-bootstrap"* ]]; then
+        echo "⚠️  Detected cloned template repository"
+        echo "   This appears to be a direct clone of claude-code-bootstrap"
+        echo ""
+        echo "   Recommendation: Reinitialize git for a fresh start"
+        echo "   This will:"
+        echo "     - Remove connection to template repo"
+        echo "     - Clear commit history"
+        echo "     - Start with clean git repository"
+        echo ""
+        read -p "   Reinitialize git? (Y/n) " -n 1 -r
+        echo
+        if [[ ! $REPLY =~ ^[Nn]$ ]]; then
+            echo "   🔄 Reinitializing git repository..."
+            rm -rf "$PROJECT_ROOT/.git"
+            cd "$PROJECT_ROOT"
+            git init
+            git branch -M main
+            echo "   ✓ Git reinitialized on branch 'main'"
+            echo ""
+        else
+            echo "   Skipping git reinitialization"
+            echo ""
+        fi
+    fi
+fi
+
 # Detect if running from within .claude/ or external
 if [[ "$SCRIPT_DIR" == *"/.claude"* ]]; then
     # Running from installed .claude/
