@@ -1,0 +1,65 @@
+{
+  "quality_long_method": {
+    "threshold": 195.43572304296768,
+    "trigger_count": 10,
+    "last_trigger": "2025-11-13T04:21:30.875260+00:00",
+    "cooldown_until": "2025-11-13T05:21:53.980524+00:00",
+    "default_threshold": 50
+  },
+  "quality_high_complexity": {
+    "threshold": 17.37206427048602,
+    "trigger_count": 7,
+    "last_trigger": "2025-11-13T04:21:30.875436+00:00",
+    "cooldown_until": "2025-11-13T05:21:53.980550+00:00",
+    "default_threshold": 10
+  },
+  "quality_deep_nesting": {
+    "threshold": 2.1870000000000003,
+    "trigger_count": 5,
+    "last_trigger": "2025-11-13T04:21:30.875578+00:00",
+    "cooldown_until": "2025-11-13T05:21:53.980561+00:00",
+    "default_threshold": 4
+  },
+  "quality_debug_statements": {
+    "threshold": 1.64025,
+    "trigger_count": 6,
+    "last_trigger": "2025-11-13T04:21:30.875892+00:00",
+    "cooldown_until": "2025-11-13T05:21:53.980577+00:00",
+    "default_threshold": 3
+  },
+  "quality_tech_debt_markers": {
+    "threshold": 5,
+    "trigger_count": 0,
+    "last_trigger": null,
+    "cooldown_until": null,
+    "default_threshold": 5
+  },
+  "quality_magic_numbers": {
+    "threshold": 3.0375,
+    "trigger_count": 10,
+    "last_trigger": "2025-11-15T02:10:17.543936+00:00",
+    "cooldown_until": "2025-11-13T05:21:53.980586+00:00",
+    "default_threshold": 5
+  },
+  "perf_blocking_io": {
+    "threshold": 1,
+    "trigger_count": 0,
+    "last_trigger": null,
+    "cooldown_until": null,
+    "default_threshold": 1
+  },
+  "perf_repeated_calculation": {
+    "threshold": 1.5,
+    "trigger_count": 3,
+    "last_trigger": "2025-11-11T06:33:41.611810+00:00",
+    "cooldown_until": "2025-11-11T07:33:42.876329+00:00",
+    "default_threshold": 3
+  },
+  "perf_repeated_calculation_ops": {
+    "threshold": 2,
+    "trigger_count": 0,
+    "last_trigger": null,
+    "cooldown_until": null,
+    "default_threshold": 2
+  }
+}

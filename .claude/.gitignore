@@ -1,0 +1,28 @@
+# Logs
+logs/*.jsonl
+logs/*.log
+*.log
+last_conversation.txt
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Cache
+*.cache
+.cache/
+
+# Temporary files
+*.tmp
+*.temp
+tmp-*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Keep directory structure
+!logs/.gitkeep
